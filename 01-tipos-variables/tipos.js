@@ -4,8 +4,11 @@ var fecha = new Date();
 var casado = false;
 var casa = undefined;
 var carro = null;
-var arreglo = [];
 
+
+var sumarDosNumerosDos = function (numeroUno, numeroDos){
+    return numeroUno + numeroDos;
+};
 
 var usuario = {
     nombre:"Adrian",
@@ -25,11 +28,17 @@ function sumarDosNumeros(numeroUno, numeroDos) {
     //return numeroDos + numeroUno;
 }
 
-var sumarDosNumerosDos = function (numeroUno, numeroDos){
-    return numeroUno + numeroDos;
-};
+
 
 console.log(sumarDosNumerosDos(2,2));
 
 console.log(usuario.apellido)
 usuario.imprimirenconsola()
+
+
+var arreglo = [1,"hol", false, null, undefined, {nombre:"brayan",}];
+
+for (var aux=0; aux<10; aux++){
+
+}
+
