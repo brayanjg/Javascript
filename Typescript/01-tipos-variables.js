@@ -23,3 +23,11 @@ var Usuario = /** @class */ (function () {
 }());
 var usuario = new Usuario('Adrian', 28, '1234543');
 console.log(usuario);
+var UsuarioTres = /** @class */ (function () {
+    function UsuarioTres(mNombre, mEdad, mCedula) {
+        this.mNombre = mNombre;
+        this.mEdad = mEdad;
+        this.mCedula = mCedula;
+    }
+    return UsuarioTres;
+}());

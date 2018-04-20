@@ -37,3 +37,17 @@ class Usuario {
 let usuario: Usuario = new Usuario('Adrian',28, '1234543');
 
 console.log(usuario);
+
+interface UsuarioDos {
+    mNombre: String;
+    mEdad: Number;
+    mCedula: String;
+    imprimirEnConsola(nombre: String):void;
+}
+
+class UsuarioTres {
+    constructor (public mNombre:String,
+                 private mEdad: Number,
+                 protected mCedula: String){}
+
+}
