@@ -79,7 +79,9 @@ let usuarioConCincoAnioMenos = arregloUsuarios
             usuario.deuda = calcularDeudaDeUsuario(usuario.edad);
             return usuario;
         }
-);
+).filter((usuario:UsuarioArreglo)=>{
+    return (usuario.deuda<100);
+    })
 
 console.log('usuariosConCincoAniosMenos', usuarioConCincoAnioMenos);
 
