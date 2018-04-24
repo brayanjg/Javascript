@@ -64,6 +64,17 @@ let resultadoDeLaSumaDos = arregloNumeros.reduce(
     20
 );
 
+let usuarioConCincoAnioMenos = arregloUsuarios
+    .map(
+        (usuario:UsuarioArreglo)=>{
+            usuario.edad = usuario.edad-5;
+            return usuario;
+        }
+);
+
+console.log('usuariosConCincoAniosMenos', usuarioConCincoAnioMenos);
+
+
 let resultadoDeLasEdades = arregloUsuarios.reduce(
     (totalAacumulado, usuarioArreglo: UsuarioArreglo)=>{
         return totalAacumulado - usuarioArreglo.edad;
