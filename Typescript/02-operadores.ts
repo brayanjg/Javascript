@@ -1,4 +1,6 @@
 let arregloNumeros = [1,2,3,4,5]
+
+let arregloDeudas = [73,123,23,43,54,678]
 let arregloUsuarios: UsuarioArreglo[] = [
     {
         nombre: 'Adrias',
@@ -63,11 +65,18 @@ let resultadoDeLaSumaDos = arregloNumeros.reduce(
     },
     20
 );
+function calcularDeudaDeUsuario(edad) {
+    return arregloDeudas.reduce((totalAcumulado, deuda: number)=>{
+        return totalAcumulado + ((edad/100)*deuda)
+    },0);
+
+}
 
 let usuarioConCincoAnioMenos = arregloUsuarios
     .map(
         (usuario:UsuarioArreglo)=>{
             usuario.edad = usuario.edad-5;
+            usuario.deuda = calcularDeudaDeUsuario(usuario.edad);
             return usuario;
         }
 );
@@ -87,5 +96,6 @@ console.log('resultadosDeLasEdades', resultadoDeLasEdades)
 interface UsuarioArreglo {
     nombre: String;
     edad: number;
+    deuda?: number;
 
 }
